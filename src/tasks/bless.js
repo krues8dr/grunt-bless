@@ -44,6 +44,7 @@ module.exports = function(grunt) {
 			var writeFiles = !!inputFile.dest,
 				output_filename_orig = inputFile.dest || inputFile,
 				outPutfileName = file_utils.strip_extension(output_filename_orig),
+				pathType = inputFile.pathType || 'absolute',
 				limit = MAX_SELECTORS,
 				suffix = options.suffix,
 				data = '',
@@ -127,6 +128,7 @@ module.exports = function(grunt) {
 				header += file_utils.imports({
 					numFiles: filesLength,
 					output: outPutfileName,
+					pathType: pathType,
 					suffix: suffix,
 					linefeed: (options.compress ? '' : grunt.util.linefeed)
 				});
