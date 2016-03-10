@@ -42,7 +42,7 @@ export function imports(options) {
 			let splitted = _name.split('/');
 			_name = splitted[splitted.length - 1];
 		}
-		statements += '@import "' + name(options.output, current, options.suffix, EXTENSION) + '";' + options.linefeed;
+		statements += '@import "' + _name + '";' + options.linefeed;
 
 		current--;
 	}
