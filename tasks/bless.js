@@ -131,7 +131,8 @@ module.exports = function (grunt) {
 						numFiles: filesLength,
 						output: outPutfileName,
 						suffix: suffix,
-						linefeed: options.compress ? '' : grunt.util.linefeed
+						linefeed: options.compress ? '' : grunt.util.linefeed,
+						pathType: options.pathType
 					});
 
 					header += grunt.util.linefeed;
